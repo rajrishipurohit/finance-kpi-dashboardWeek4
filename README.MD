@@ -1,17 +1,37 @@
-Finance KPI Dashboard
-A simple yet powerful interactive finance KPI dashboard built with Python (pandas, matplotlib) and Streamlit.
-This project showcases my ability to combine finance domain expertise with modern data tools to create insightful, demo-ready apps.
-🚀 Live Demo
-🔗 Click here to open the app: https://slekpi.streamlit.app
-📌 Features
-✅ Monthly KPIs tracked: Revenue, Total Invoices, Late Payment Rate
-✅ Derived metrics: Month-over-Month % change
-✅ Interactive dashboard with:
-Sidebar filters for month range & KPI selection
-Auto-updating charts
-Trend highlights (🟢 Growth / 🔴 Decline)
-✅ Clean deployment on Streamlit Community Cloud
-📂 Project Structure
+Perfect 👌 — a polished `README.md` will make your repo look like a **professional portfolio project**.
+Here’s a version you can copy–paste into your repo:
+
+---
+
+# 📊 Finance KPI Dashboard
+
+A simple yet powerful **interactive finance KPI dashboard** built with **Python (pandas, matplotlib) and Streamlit**.
+This project showcases my ability to combine **finance domain expertise** with **modern data tools** to create insightful, demo-ready apps.
+
+---
+
+## 🚀 Live Demo
+
+🔗 [Click here to open the app](https://slekpi.streamlit.app)
+
+---
+
+## 📌 Features
+
+* ✅ Monthly KPIs tracked: **Revenue, Total Invoices, Late Payment Rate**
+* ✅ Derived metrics: **Month-over-Month % change**
+* ✅ **Interactive dashboard** with:
+
+  * Sidebar filters for month range & KPI selection
+  * Auto-updating charts
+  * Trend highlights (🟢 Growth / 🔴 Decline)
+* ✅ Clean deployment on **Streamlit Community Cloud**
+
+---
+
+## 📂 Project Structure
+
+```
 finance-kpi-dashboardWeek4/
 │
 ├── finance_dashboard_app.py       # Main Streamlit app
@@ -19,8 +39,15 @@ finance-kpi-dashboardWeek4/
 ├── requirements.txt               # Minimal dependencies
 ├── README.md                      # Project documentation
 └── charts/                        # Saved PNGs of KPI charts (optional)
-⚙️ Installation (Run Locally)
+```
+
+---
+
+## ⚙️ Installation (Run Locally)
+
 Clone the repo and install requirements:
+
+```bash
 git clone https://github.com/rajrishipurohit/finance-kpi-dashboardWeek4.git
 cd finance-kpi-dashboardWeek4
 
@@ -33,9 +60,23 @@ pip install -r requirements.txt
 
 # Run the dashboard
 streamlit run finance_dashboard_app.py
-🎯 Learning Outcome
+```
+
+---
+
+## 🎯 Learning Outcome
+
 This project demonstrates:
-My ability to build AI/Data products hands-on (not just manage them)
-Practical use of Python, pandas, matplotlib, and Streamlit
-Deployment to a real-world, shareable web app
-Combining financial process knowledge (O2C, P2P, RTR) with data analytics
+
+* My ability to **build AI/Data products hands-on** (not just manage them)
+* Practical use of **Python, pandas, matplotlib, and Streamlit**
+* Deployment to a **real-world, shareable web app**
+* Combining **financial process knowledge** (O2C, P2P, RTR) with **data analytics**
+
+---
+
+## 🔮 Next Steps
+
+* Adding forecasting (ARIMA / Prophet)
+* Enhance visuals with Plotly
+* Deploy multiple KPI dashboards
