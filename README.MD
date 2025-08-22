@@ -1,8 +1,3 @@
-Perfect 👌 — a polished `README.md` will make your repo look like a **professional portfolio project**.
-Here’s a version you can copy–paste into your repo:
-
----
-
 # 📊 Finance KPI Dashboard
 
 A simple yet powerful **interactive finance KPI dashboard** built with **Python (pandas, matplotlib) and Streamlit**.
@@ -63,20 +58,3 @@ streamlit run finance_dashboard_app.py
 ```
 
 ---
-
-## 🎯 Learning Outcome
-
-This project demonstrates:
-
-* My ability to **build AI/Data products hands-on** (not just manage them)
-* Practical use of **Python, pandas, matplotlib, and Streamlit**
-* Deployment to a **real-world, shareable web app**
-* Combining **financial process knowledge** (O2C, P2P, RTR) with **data analytics**
-
----
-
-## 🔮 Next Steps
-
-* Adding forecasting (ARIMA / Prophet)
-* Enhance visuals with Plotly
-* Deploy multiple KPI dashboards
