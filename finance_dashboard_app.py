@@ -6,6 +6,30 @@ import matplotlib.pyplot as plt
 st.set_page_config(page_title="Finance KPI Dashboard", layout="wide")
 
 
+# Code for the counter:
+import os
+# Path to store visitor count (Streamlit Cloud keeps it while app is running)
+counter_file = "visitor_count.txt"
+
+# Initialize file if not exists
+if not os.path.exists(counter_file):
+    with open(counter_file, "w") as f:
+        f.write("0")
+
+# Read current count
+with open(counter_file, "r") as f:
+    count = int(f.read())
+
+# Increment count
+count += 1
+
+# Save updated count
+with open(counter_file, "w") as f:
+    f.write(str(count))
+
+# Display on sidebar
+st.sidebar.metric("👥 Total Visitors", count)
+
 # Load Data
 df = pd.read_csv("finance_kpi_enriched.csv")
 
@@ -38,4 +62,4 @@ previous = df.iloc[-2]
 st.write(f"📌 Last Month Revenue: **{latest['Revenue_in_Million']}M**")
 st.write(f"📌 MoM Revenue Change: **{latest['Revenue_MoM_%']}%**")
 st.write(f"📌 Late Payment Rate: **{latest['Late_Payment_Rate_%']}%**")
-st.write("Hello World")
+st.write("Hello World, that's where life starts, that's where the magic happens")
