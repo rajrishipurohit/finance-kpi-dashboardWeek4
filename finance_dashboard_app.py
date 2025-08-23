@@ -77,7 +77,7 @@ for c, visits in visitor_data["countries"].items():
 df = pd.read_csv("finance_kpi_enriched.csv")
 
 # ---- Page Title ----
-st.title("📊 Finance KPI Dashboard")
+st.title("📊 Finance KPI Dashboard: Glocal Finance Services")
 
 # ---- Toggle Raw Data ----
 if st.checkbox("Show Raw Data"):
