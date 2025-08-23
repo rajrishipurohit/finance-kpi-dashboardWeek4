@@ -2,6 +2,10 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit_analytics
+
+# Start tracking visits
+streamlit_analytics.start_tracking()
 
 # Load Data
 df = pd.read_csv("finance_kpi_enriched.csv")
@@ -24,6 +28,10 @@ st.bar_chart(df.set_index("Month")["Revenue_in_Million"])
 # Chart 3: Late Payment %
 st.subheader("Late Payment Rate (%)")
 st.bar_chart(df.set_index("Month")["Late_Payment_Rate_%"])
+
+# Show visit count at bottom
+st.sidebar.subheader("👥 Visitors Analytics <Feature Just Gone Live ;)>")
+streamlit_analytics.stop_tracking()
 
 # Insights
 st.subheader("Key Insights")
