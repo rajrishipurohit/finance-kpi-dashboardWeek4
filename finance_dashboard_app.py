@@ -2,9 +2,57 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
+import requests
+import json
 
 st.set_page_config(page_title="Finance KPI Dashboard", layout="wide")
 
+
+# Code for visitor location and the respective counts from that country
+
+# ---- Visitor Data File ----
+counter_file = "visitor_data.json"
+
+# Initialize file if not exists
+if not os.path.exists(counter_file):
+    with open(counter_file, "w") as f:
+        json.dump({"count": 0, "countries": {}}, f)
+
+# Read current data
+with open(counter_file, "r") as f:
+    data = json.load(f)
+
+# Increment total visitor count
+data["count"] += 1
+
+# ---- Country Detection ----
+def get_user_country():
+    try:
+        res = requests.get("https://ipapi.co/json/")
+        info = res.json()
+        return info.get("country_name", "Unknown")
+    except:
+        return "Unknown"
+
+country = get_user_country()
+
+# Update country visit count
+if country in data["countries"]:
+    data["countries"][country] += 1
+else:
+    data["countries"][country] = 1
+
+# Save updated data
+with open(counter_file, "w") as f:
+    json.dump(data, f)
+
+# ---- Show in Sidebar ----
+st.sidebar.metric("👥 Total Visitors", data["count"])
+st.sidebar.subheader("🌍 Visitors by Country")
+
+for c, visits in data["countries"].items():
+    st.sidebar.write(f"{c}: {visits}")
 
 # Code for the counter:
 import os
