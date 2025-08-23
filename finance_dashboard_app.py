@@ -2,9 +2,12 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import streamlit_analytics
+
 
 st.set_page_config(page_title="Finance KPI Dashboard", layout="wide")
-
+# Start analytics in local mode (no Firestore)
+streamlit_analytics.start_tracking()
 
 # Load Data
 df = pd.read_csv("finance_kpi_enriched.csv")
@@ -30,6 +33,7 @@ st.bar_chart(df.set_index("Month")["Late_Payment_Rate_%"])
 
 # Show visitor stats
 st.sidebar.subheader("👥 Visitors Analytics <Feature just gone live>")
+streamlit_analytics.stop_tracking()
 
 # Insights
 st.subheader("Key Insights")
