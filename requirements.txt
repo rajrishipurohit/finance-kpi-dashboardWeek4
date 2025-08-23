@@ -1,4 +1,4 @@
 pandas
 matplotlib
 streamlit
-streamlit-analytics
+streamlit-analytics==0.4.1

@@ -4,7 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit_analytics
 
-# Start tracking visits
+st.set_page_config(page_title="Finance KPI Dashboard", layout="wide")
+
+# Start analytics in local mode (no Firestore)
 streamlit_analytics.start_tracking()
 
 # Load Data
@@ -29,8 +31,8 @@ st.bar_chart(df.set_index("Month")["Revenue_in_Million"])
 st.subheader("Late Payment Rate (%)")
 st.bar_chart(df.set_index("Month")["Late_Payment_Rate_%"])
 
-# Show visit count at bottom
-st.sidebar.subheader("👥 Visitors Analytics <Feature Just Gone Live ;)>")
+# Show visitor stats
+st.sidebar.subheader("👥 Visitors Analytics <Feature just gone live>")
 streamlit_analytics.stop_tracking()
 
 # Insights
