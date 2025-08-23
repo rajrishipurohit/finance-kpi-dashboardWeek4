@@ -28,7 +28,7 @@ with open(counter_file, "w") as f:
     f.write(str(count))
 
 # Display on sidebar
-st.sidebar.metric("👥 Total Visitors", count)
+st.sidebar.metric("👥 Total Visitors", count, "New Feature ;)")
 
 # Load Data
 df = pd.read_csv("finance_kpi_enriched.csv")
@@ -51,9 +51,6 @@ st.bar_chart(df.set_index("Month")["Revenue_in_Million"])
 # Chart 3: Late Payment %
 st.subheader("Late Payment Rate (%)")
 st.bar_chart(df.set_index("Month")["Late_Payment_Rate_%"])
-
-# Show visitor stats
-st.sidebar.subheader("👥 Visitors Analytics <Feature just gone>")
 
 # Insights
 st.subheader("Key Insights")
