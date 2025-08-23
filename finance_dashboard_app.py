@@ -23,14 +23,14 @@ VISITOR_FILE = "visitor_data.json"
 # Initialize visitor data if not exists
 if not os.path.exists(VISITOR_FILE):
     with open(VISITOR_FILE, "w") as f:
-        json.dump({"total_visits": 0, "countries": {}}, f)
+        json.dump({"count": 0, "countries": {}}, f)
 
 # Load visitor data
 with open(VISITOR_FILE, "r") as f:
     visitor_data = json.load(f)
 
 # Increment total visits
-visitor_data["total_visits"] += 1
+visitor_data["count"] += 1
 
 # Detect visitor country (⚠️ On Streamlit Cloud, may show US for everyone)
 def get_user_country():
